@@ -3,8 +3,8 @@ const app = express();
 const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
-    origin: "https://aleksandracyp.github.io/playsound-frontend/",
-    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   },
 });
 
