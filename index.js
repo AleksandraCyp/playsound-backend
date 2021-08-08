@@ -4,7 +4,7 @@ const http = require("http").createServer(app);
 const io = require("socket.io")(http, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "HEAD", "OPTIONS", "PUT", "PATCH", "DELETE"],
     allowedHeaders: [
       'Origin',
       'X-Requested-With',
@@ -13,7 +13,6 @@ const io = require("socket.io")(http, {
       'X-Access-Token',
     ],
     credentials: true,
-    methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
     preflightContinue: false,
   },
 });
